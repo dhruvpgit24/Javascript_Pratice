@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgb(150, 208, 255);
+            background: linear-gradient(90deg, rgba(150, 208, 255, 1) 48%, rgba(42, 165, 255, 1) 60%);
+        }
+
+        .valform {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(150, 208, 255);
+            background: linear-gradient(90deg, rgba(150, 208, 255, 1) 48%, rgba(42, 165, 255, 1) 60%);
+        }
+
+        .form {
+            height: auto;
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid black;
+            padding: 2% 2%;
+            background-color: white;
+        }
+
+        .form>input {
+            height: 25px;
+        }
+
+        .form> ::placeholder {
+            font-size: 15px;
+        }
+
+        #checkpass {
+            height: 15px;
+            padding-left: 50px;
+        }
+
+        button {
+            height: 30px;
+            font-size: 15px;
+            width: 100px;
+            text-align: center;
+            margin-left: 200px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: aquamarine;
+            border-radius: 50px;
+        }
+        
+    </style>
+</head>
+
+<body id="body">
+    <div class="valform">
+        <form action="" class="form">
+            Input Form
+            <input type="text" class="name" id="fname" placeholder="Enter Your First Name">
+            <input type="text" class="name" id="lname" placeholder="Enter Your Last Name">
+            <input type="text" class="number" id="number" placeholder="Enter Your Phone Number">
+            <input type="date" class="age" id="bdate" placeholder="Enter Your Age" min="1995-01-01" max="2025-03-01">
+            <p>your age is - <span id="fage"></span></p>
+            <input type="email" class="mail" id="mail" placeholder="Enter Your Email">
+            <input type="password" class="pass" id="pass" placeholder="Enter Your Password">
+            <label>
+                <input type="checkbox" id="checkpass" onclick=myFunction()>Show Password
+            </label>
+            <input type="password" class="pass" id="cnfpass" placeholder="Enter Your Password Again">
+            <label>
+                <input type="checkbox" id="checkpass" onclick=myFunction2()>Show Password
+            </label>
+            <label for="">Select Your Gender</label>
+            <label id="">
+                <input type="radio" name="gender" value="male"> Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female"> Female
+            </label>
+            <label>Uplode your Photo -
+                <input type="file" id="file" accept=".jpg, .jpeg, .png, .gif">
+            </label>
+            <button id="btn">Submit</button>
+            <p id="p1"></p>
+            <p id="p2"></p>
+            <p id="p3"></p>
+            <p id="p4"></p>
+            <p id="p5"></p>
+            <p id="p6"></p>
+            <p id="p7"></p>
+        </form>
+    </div>
+</body>
+<script src="form.js"></script>
+
+</html>
