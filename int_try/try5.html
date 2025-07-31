@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h2>2416</h2>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+    <script>
+      let h2 =  document.querySelector("h2")
+      let start = document.getElementById("start")
+      let stop = document.getElementById("stop")
+      start.addEventListener('click',function(){
+       change = setInterval(function(){
+            h2.innerHTML = '1624'
+        }, 2000)
+      })
+      stop.addEventListener('click',function(){
+        clearInterval(change)
+      })
+    </script>
+</html>

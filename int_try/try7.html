@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled Progress and Meter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f4f4f4;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    progress, meter {
+      width: 100%;
+      height: 25px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    progress::-webkit-progress-bar {
+      background-color: #eee;
+      border-radius: 10px;
+    }
+
+    progress::-webkit-progress-value {
+      background-color: #4caf50;
+      border-radius: 10px;
+    }
+
+    meter {
+      background: #eee;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    meter::-webkit-meter-bar {
+      background: #eee;
+    }
+
+    meter::-webkit-meter-optimum-value {
+      background: #4caf50;
+    }
+
+    meter::-webkit-meter-suboptimum-value {
+      background: orange;
+    }
+
+    meter::-webkit-meter-even-less-good-value {
+      background: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔄 File Upload Progress</h2>
+  <p>Uploading your photo...</p>
+  <progress value="50" max="100">60%</progress>
+
+  <h2>🔋 Battery Level Indicator</h2>
+  <p>Battery status:</p>
+  <meter value="0.75" min="0" max="1">75%</meter>
+
+  <h2>🌡️ Temperature Level</h2>
+  <p>Current temperature:</p>
+  <meter value="28" min="0" max="50" low="15" high="35" optimum="22">28°C</meter>
+
+  <h2>⭐ User Rating</h2>
+  <p>Rating: 4.2 out of 5</p>
+  <meter value="4.2" min="0" max="5">4.2</meter>
+
+  <!-- --------------------------------------------------------- -->
+  <h3>Fast Scroll</h3>
+  <marquee scrollDelay="30">This text is scrolling fast.</marquee>
+
+  <h3>Slow Scroll</h3>
+  <marquee scrollDelay="150">This text is scrolling slowly.</marquee>
+
+  <!-- --------------------------------------------------------- -->
+  <dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language</dd>
+  
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets</dd>
+  
+    <dt>JavaScript</dt>
+    <dd>A language used to make web pages interactive.</dd>
+  </dl>
+</body>
+</html>
